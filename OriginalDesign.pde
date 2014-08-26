@@ -15,6 +15,13 @@ void draw()
 {  
   background(0);
   
+  lightBall();
+  
+  sphereCube();
+}
+
+void lightBall()
+{
   pointLight(240,240,250,mouseX,mouseY,z);
   
   translate(mouseX,mouseY,z);
@@ -27,7 +34,10 @@ void draw()
   sphere(10);
   
   translate(-mouseX,-mouseY,-z);
-  
+}
+
+void sphereCube();
+{
   translate(150+m,150+n,0);
   
   rotateX(x);
