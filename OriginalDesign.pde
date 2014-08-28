@@ -36,7 +36,7 @@ void lightBall()
   translate(-mouseX,-mouseY,-z);
 }
 
-void sphereCube();
+void sphereCube()
 {
   translate(150+m,150+n,0);
   

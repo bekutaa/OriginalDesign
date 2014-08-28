@@ -31,8 +31,29 @@ public void draw()
 {  
   background(0);
   
-  light();
+  lightBall();
   
+  sphereCube();
+}
+
+public void lightBall()
+{
+  pointLight(240,240,250,mouseX,mouseY,z);
+  
+  translate(mouseX,mouseY,z);
+  
+  rotateX(0);
+  rotateY(0);
+  
+  stroke(random(255),random(255),random(255),45);
+  noFill();
+  sphere(10);
+  
+  translate(-mouseX,-mouseY,-z);
+}
+
+public void sphereCube()
+{
   translate(150+m,150+n,0);
   
   rotateX(x);
@@ -47,22 +68,6 @@ public void draw()
   
   x = x + p;
   y = y - o;
-}
-
-public void light()
-{
-  pointLight(240,240,250,mouseX,mouseY,z);
-  
-  translate(mouseX,mouseY,z);
-  
-  rotateX(0);
-  rotateY(0);
-  
-  stroke(random(255),random(255),random(255),45);
-  noFill();
-  sphere(10);
-  
-  translate(-mouseX,-mouseY,-z);
 }
 
 public void keyPressed()
